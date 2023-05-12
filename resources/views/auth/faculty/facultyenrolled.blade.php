@@ -15,9 +15,11 @@
           <div class="card" style="padding-top:10px;">
 
             <div class="card-body">
-            
-   <div class="card-title">ENROLLMENT LIST <input type="button" class="btn btn-outline-success" onclick='selects()' value="Select All"/>  
-        <input type="button" onclick='deSelect()'  class="btn btn-outline-warning" value="Deselect All"/></div>
+          
+        <div class="card-title">DEPARTMENT LIST <input type="button" class="btn btn-outline-success" onclick='selects()' value="Select All"/>  
+        <input type="button" onclick='deSelect()'  class="btn btn-outline-warning" value="Deselect All"/>&nbsp;
+        <a href="{{ route('send.email.view')  }}" class="btn btn-success">Send Email</a></div>
+        
         <form action="{{ route('approve')  }}" method="POST">
      <div class="table-responsive">
      
@@ -47,34 +49,7 @@
                               <td>{{$faculty->enroll_name}}</td>
                               <td>{{$faculty->enroll_mobile}}</td>
                               <td>
-                                <a 
-                                 href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#userShowModal"
-                                  
-                                  data-url="{{ route('faculty.show',$faculty->id) }}" 
-                                  class="btn btn-info show-user">
-                                  Show More</a>
-                                  <td> 
-                                @if($faculty->application_status == 1)
-                                <a href="{{route('admin.userstatuschange',[$faculty['id'],'2'])}}" onclick="return confirm('Are you sure you want to make inactive');" class="btn btn-outline-success" style="" id="">Approve </a>
-                              
-                               @else
-                               <a href="{{route('admin.userstatuschange',[$faculty['id'],'0'])}}" onclick="return confirm('Are you sure you want to make active');" class="btn btn-outline-danger" id="">Decline</a>
-                             
-                            @endif
-                                  <a href="{{route('admin.userremove',[$faculty['id']])}}" onclick="return confirm('Are you sure you want to delete');" class="btn btn-danger" id="action_btn-del"><i class='bi bi-trash-fill'></i></a>
-                     
                        
-                                
-                              </td>
-                              </td>
-                              
-                            
-                              
-                             
-                            
-                            
-                           
-                          
                           </tr>
                           @endforeach
                             </tbody>

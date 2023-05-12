@@ -54,10 +54,13 @@ class FacultyController extends Controller
         $details['actiontext'] = $request->actiontext;
         $details['actionurl'] = $request->actionurl;
         $details['endtext'] = $request->endtext;
-
+        
         foreach($users as $user){
             Notification::send($user, new SendEmailNotification($details));
+
         }
+        return view('auth.faculty.email-sented');
+        
     }
 
     public function facultyEnrollStep1(Request $request)

@@ -145,7 +145,7 @@
       </li><!-- End User Nav -->
 
       <li class="nav-item">
-        <a class="nav-link " href="{{route('deptcreation')}}">
+        <a class="nav-link " href="{{route('deptlist')}}">
           <i class="bi bi-grid"></i>
           <span>Department</span>
         </a>

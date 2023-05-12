@@ -2,14 +2,9 @@
 @extends("adminlayouts.theme")
 @section("maincontent")
 
-    <!-- <div class="pagetitle">
-      <div class="alert alert-primary" style="background-color:#1E2F97;color: white;text-transform: uppercase;">
-        <a href="{{route('userlist')}}" style="color:white" ><i class="bi bi-plus-circle-fill"></i>User list</a> 
-       </div>
-    </div>End Page Title -->
     <div class="pagetitle">
       <div class="alert alert-primary" style="background-color:#1E2F97;color: white;text-transform: uppercase;">
-        <a href="{{route('userlist')}}" style="color:white" ><i class="bi bi-plus-circle-fill"></i>User list</a> 
+        <a href="{{route('admin.dashboard')}}" style="color:white" ></i>DASHBOARD</a> 
 </div>
 </div>
     <section class="section">
@@ -50,10 +45,14 @@
         </div>
      
         <div class="text-center">
-                  <button type="submit" id="continue" class="btn btn-primary">Submit</button>
-                  
+         <button type="submit" id="continue" class="btn btn-primary">Submit</button>
+              
                 </div>
+          
+
 </form>
+
+
       
              
      
